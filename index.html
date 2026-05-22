@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thánh Chỉ Hoàng Gia - Đặng Quang Trường</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --gold: #d4af37;
+            --gold-light: #f3e5ab;
+            --bg-dark: #121212;
+            --card-bg: #1a1a1a;
+            --haidilao-red: #ea232a;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: #ffffff;
+            font-family: 'Quicksand', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+            background-image: radial-gradient(circle, #222 10%, #121212 90%);
+        }
+
+        .invitation-card {
+            background-color: var(--card-bg);
+            border: 2px solid var(--gold);
+            border-image: linear-gradient(to bottom right, var(--gold), #554109, var(--gold)) 1;
+            padding: 40px 30px;
+            max-width: 500px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7), 0 0 20px rgba(212, 175, 55, 0.1);
+            position: relative;
+            border-radius: 4px;
+        }
+
+        /* Góc họa tiết hoàng gia */
+        .invitation-card::before {
+            content: '👑';
+            font-size: 2rem;
+            display: block;
+            margin-bottom: 15px;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        h1 {
+            font-family: 'Cinzel', serif;
+            color: var(--gold);
+            font-size: 1.6rem;
+            letter-spacing: 2px;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+
+        p {
+            line-height: 1.8;
+            font-size: 1.05rem;
+            color: #e0e0e0;
+            margin-bottom: 20px;
+        }
+
+        .highlight-name {
+            color: var(--gold-light);
+            font-weight: 700;
+            border-bottom: 1px dashed var(--gold);
+            padding-bottom: 2px;
+        }
+
+        /* Khối thông tin chi tiết */
+        .info-box {
+            background: rgba(255, 255, 255, 0.03);
+            border-left: 3px solid var(--haidilao-red);
+            padding: 20px;
+            margin: 25px 0;
+            text-align: left;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .info-item {
+            margin-bottom: 12px;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .info-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .icon {
+            font-size: 1.3rem;
+            margin-right: 12px;
+            margin-top: 2px;
+        }
+
+        .info-text strong {
+            color: var(--gold);
+            display: block;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .info-text span {
+            font-size: 1.1rem;
+            font-weight: 700;
+        }
+
+        .footer-text {
+            font-style: italic;
+            color: #aaa;
+            font-size: 0.95rem;
+            margin-top: 25px;
+        }
+
+        /* Nút tương tác bấm cho vui */
+        .btn-rsvp {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--gold), #aa8010);
+            color: #000;
+            font-weight: 700;
+            font-size: 1rem;
+            padding: 12px 30px;
+            margin-top: 25px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+        }
+
+        .btn-rsvp:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.5);
+            background: linear-gradient(135deg, var(--gold-light), var(--gold));
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        @media (max-width: 480px) {
+            .invitation-card {
+                padding: 30px 20px;
+            }
+            h1 {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="invitation-card">
+        <h1>Thánh Chỉ Hoàng Gia</h1>
+        
+        <p>Gửi tới toàn thể Vương tôn công tử và Công nương lá ngọc cành vàng ✨</p>
+        
+        <p>Nhận thấy bản thân ngày càng tài sắc vẹn toàn, nay Hoàng thân <span class="highlight-name">Đặng Quang Trường</span> quyết định mở đại yến tiệc đón tuổi mới tại thánh địa lẩu vị hoàng gia.</p>
+
+        <div class="info-box">
+            <div class="info-item">
+                <div class="icon">📍</div>
+                <div class="info-text">
+                    <strong>Địa điểm</strong>
+                    <span>Haidilao – Vạn Hạnh Mall 🍲</span>
+                </div>
+            </div>
+            <div class="info-item">
+                <div class="icon">⏰</div>
+                <div class="info-text">
+                    <strong>Thời gian hoàng đạo</strong>
+                    <span>21:30 ngày 25/05 🌙</span>
+                </div>
+            </div>
+            <div class="info-item">
+                <div class="icon">💃</div>
+                <div class="info-text">
+                    <strong>Trang phục</strong>
+                    <span>Nữ không mặc đầm, giày thủy tinh vì sẽ đi quá 12h. Nam scd.</span>
+                </div>
+            </div>
+        </div>
+
+        <p>Sự hiện diện của các khanh là niềm vinh hạnh lớn cho bổn vương. Đứa nào bùng hẹn, Ta ghim vào sổ thù vặt của dòng họ Đặng! 📜✍️</p>
+
+        <button class="btn-rsvp" onclick="alert('Đã ghi nhận hộ giá! Chuẩn bị cái bụng đói đi ăn lẩu nhé bạn hiền 🎉')">
+            Hộ Giá Ngay 🥂
+        </button>
+
+        <div class="footer-text">Thân mời và quyết thắng! 🔥</div>
+    </div>
+
+</body>
+</html>
