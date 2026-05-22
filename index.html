@@ -4,18 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thánh Chỉ Hoàng Gia - Đặng Quang Trường</title>
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,800;1,400&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
     <style>
         :root {
-            --gold: #d4af37;
-            --gold-light: #f3e5ab;
-            --bg-dark: #121212;
-            --card-bg: #1a1a1a;
-            --haidilao-red: #ea232a;
+            --gold: #dfb73c;
+            --gold-light: #fbeeb8;
+            --bg-dark: #0a0a0c;
+            --card-bg: #121216;
+            --fantasy-purple: #3a1c41;
+            --fantasy-glow: rgba(223, 183, 60, 0.4);
         }
 
         * {
@@ -27,73 +29,94 @@
         body {
             background-color: var(--bg-dark);
             color: #ffffff;
-            font-family: 'Quicksand', sans-serif;
+            font-family: 'Montserrat', sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            padding: 20px;
-            background-image: radial-gradient(circle, #222 10%, #121212 90%);
+            padding: 24px;
+            background-image: 
+                radial-gradient(circle at 20% 20%, rgba(74, 21, 75, 0.25) 0%, transparent 40%),
+                radial-gradient(circle at 80% 80%, rgba(197, 160, 48, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at center, #1a1520 0%, #0a0a0c 100%);
         }
 
+        /* Khung thiệp kiểu cuốn thư cổ đại Fantasy */
         .invitation-card {
             background-color: var(--card-bg);
-            border: 2px solid var(--gold);
-            border-image: linear-gradient(to bottom right, var(--gold), #554109, var(--gold)) 1;
-            padding: 40px 30px;
-            max-width: 500px;
+            border: 3px solid var(--gold);
+            border-image: linear-gradient(135deg, var(--gold), #5e4811, var(--gold-light), #3a2c07, var(--gold)) 1;
+            padding: 50px 35px;
+            max-width: 480px;
             width: 100%;
             text-align: center;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7), 0 0 20px rgba(212, 175, 55, 0.1);
+            box-shadow: 
+                0 0 40px rgba(0, 0, 0, 0.9), 
+                0 0 25px rgba(146, 109, 13, 0.2),
+                inset 0 0 20px rgba(0, 0, 0, 0.6);
             position: relative;
-            border-radius: 4px;
         }
 
-        /* Góc họa tiết hoàng gia */
+        /* Vương miện lơ lửng hiệu ứng thần thoại */
         .invitation-card::before {
-            content: '👑';
-            font-size: 2rem;
+            content: '\f521'; 
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            font-size: 2.8rem;
+            color: var(--gold);
             display: block;
-            margin-bottom: 15px;
-            animation: float 3s ease-in-out infinite;
+            margin-bottom: 20px;
+            text-shadow: 0 0 15px rgba(223, 183, 60, 0.7);
+            animation: float 4s ease-in-out infinite;
         }
 
         h1 {
-            font-family: 'Cinzel', serif;
+            font-family: 'Playfair Display', serif;
+            font-weight: 800;
             color: var(--gold);
-            font-size: 1.6rem;
+            font-size: 2.1rem;
             letter-spacing: 2px;
-            margin-bottom: 25px;
+            margin-bottom: 30px;
             text-transform: uppercase;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+            background: linear-gradient(to right, var(--gold-light), var(--gold), #ba9420, var(--gold-light));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            filter: drop-shadow(0 2px 6px rgba(0,0,0,0.9));
         }
 
         p {
             line-height: 1.8;
-            font-size: 1.05rem;
-            color: #e0e0e0;
-            margin-bottom: 20px;
+            font-size: 1.02rem;
+            color: #dedede;
+            margin-bottom: 22px;
+            font-weight: 400;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.5);
         }
 
         .highlight-name {
+            font-family: 'Playfair Display', serif;
             color: var(--gold-light);
             font-weight: 700;
+            font-style: italic;
+            font-size: 1.3rem;
+            text-shadow: 0 0 8px rgba(251, 238, 184, 0.3);
             border-bottom: 1px dashed var(--gold);
             padding-bottom: 2px;
         }
 
-        /* Khối thông tin chi tiết */
+        /* Khối thông tin nhiệm vụ bách tính */
         .info-box {
-            background: rgba(255, 255, 255, 0.03);
-            border-left: 3px solid var(--haidilao-red);
-            padding: 20px;
-            margin: 25px 0;
+            background: linear-gradient(135deg, rgba(30, 24, 38, 0.6) 0%, rgba(20, 16, 26, 0.8) 100%);
+            border: 1px solid rgba(223, 183, 60, 0.2);
+            border-left: 4px solid var(--gold);
+            padding: 22px;
+            margin: 30px 0;
             text-align: left;
-            border-radius: 0 8px 8px 0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.4);
         }
 
         .info-item {
-            margin-bottom: 12px;
+            margin-bottom: 18px;
             display: flex;
             align-items: flex-start;
         }
@@ -103,67 +126,154 @@
         }
 
         .icon {
-            font-size: 1.3rem;
-            margin-right: 12px;
-            margin-top: 2px;
+            font-size: 1.4rem;
+            margin-right: 14px;
+            margin-top: 1px;
+            color: var(--gold-light);
+            filter: drop-shadow(0 0 8px var(--fantasy-glow));
         }
 
         .info-text strong {
             color: var(--gold);
             display: block;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 1.5px;
+            margin-bottom: 4px;
         }
 
         .info-text span {
-            font-size: 1.1rem;
+            font-size: 1rem;
+            font-weight: 600;
+            color: #ffffff;
+            line-height: 1.5;
+        }
+
+        /* Khu vực Bản đồ cổ */
+        .map-section {
+            margin: 30px 0;
+        }
+
+        .map-wrapper {
+            width: 100%;
+            height: 200px;
+            border: 2px solid #2a2213;
+            border-radius: 4px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.6);
+            margin-bottom: 15px;
+        }
+
+        .map-wrapper iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+            filter: grayscale(15%) contrast(105%); /* Hiệu ứng fantasy nhẹ cho map */
+        }
+
+        /* NÚT MAP FANTASY STYLE */
+        .btn-map {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #481e53 0%, #210729 100%);
+            color: var(--gold-light);
             font-weight: 700;
+            font-size: 0.85rem;
+            padding: 12px 28px;
+            border: 1px solid var(--gold);
+            border-radius: 4px;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(74, 21, 75, 0.4);
+        }
+
+        .btn-map:hover {
+            background: linear-gradient(135deg, #642b73 0%, #361042 100%);
+            box-shadow: 0 0 15px rgba(223, 183, 60, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .btn-map .icon {
+            font-size: 1rem;
+            color: var(--gold-light);
+            margin-right: 8px;
+            margin-top: 0;
+            filter: none;
         }
 
         .footer-text {
+            font-family: 'Playfair Display', serif;
             font-style: italic;
-            color: #aaa;
-            font-size: 0.95rem;
-            margin-top: 25px;
+            font-weight: 700;
+            color: var(--gold);
+            font-size: 1.15rem;
+            margin-top: 35px;
+            letter-spacing: 1px;
+            text-shadow: 0 0 5px rgba(223, 183, 60, 0.2);
         }
 
-        /* Nút tương tác bấm cho vui */
+        /* NÚT HỘ GIÁ ĐẬM CHẤT RPG / FANTASY GAME */
         .btn-rsvp {
+            position: relative;
             display: inline-block;
-            background: linear-gradient(135deg, var(--gold), #aa8010);
-            color: #000;
+            background: linear-gradient(135deg, #b88712 0%, #755203 100%);
+            color: #ffffff;
             font-weight: 700;
             font-size: 1rem;
-            padding: 12px 30px;
-            margin-top: 25px;
-            border: none;
-            border-radius: 25px;
+            padding: 15px 40px;
+            margin-top: 20px;
+            border: 1px solid var(--gold-light);
+            border-radius: 4px; /* Vuông vức kiểu khiên hiệp sĩ */
             cursor: pointer;
             text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+            letter-spacing: 2px;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5), 0 0 10px rgba(184, 135, 18, 0.2);
+            text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+        }
+
+        /* Hiệu ứng tia sáng quét ngang (Shimmer) cực ảo */
+        .btn-rsvp::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.25), transparent);
+            transition: all 0.6s ease;
+        }
+
+        .btn-rsvp:hover::after {
+            left: 100%;
         }
 
         .btn-rsvp:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.5);
-            background: linear-gradient(135deg, var(--gold-light), var(--gold));
+            transform: translateY(-3px) scale(1.02);
+            background: linear-gradient(135deg, #dfb73c 0%, #946b07 100%);
+            box-shadow: 0 0 25px rgba(223, 183, 60, 0.6);
         }
 
         @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-            100% { transform: translateY(0px); }
+            0% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-10px) rotate(2deg); }
+            100% { transform: translateY(0px) rotate(0deg); }
         }
 
         @media (max-width: 480px) {
             .invitation-card {
-                padding: 30px 20px;
+                padding: 40px 24px;
             }
             h1 {
-                font-size: 1.4rem;
+                font-size: 1.75rem;
+            }
+            .map-wrapper {
+                height: 160px;
             }
         }
     </style>
@@ -179,31 +289,41 @@
 
         <div class="info-box">
             <div class="info-item">
-                <div class="icon">📍</div>
+                <div class="icon"><i class="fa-solid fa-map-location-dot"></i></div>
                 <div class="info-text">
-                    <strong>Địa điểm</strong>
+                    <strong>Địa điểm biệt cung</strong>
                     <span>Haidilao – Vạn Hạnh Mall 🍲</span>
                 </div>
             </div>
             <div class="info-item">
-                <div class="icon">⏰</div>
+                <div class="icon"><i class="fa-solid fa-hourglass-start"></i></div>
                 <div class="info-text">
                     <strong>Thời gian hoàng đạo</strong>
                     <span>21:30 ngày 25/05 🌙</span>
                 </div>
             </div>
             <div class="info-item">
-                <div class="icon">💃</div>
+                <div class="icon"><i class="fa-solid fa-shield-halved"></i></div>
                 <div class="info-text">
-                    <strong>Trang phục</strong>
-                    <span>Nữ không mặc đầm, giày thủy tinh vì sẽ đi quá 12h. Nam scd.</span>
+                    <strong>Yêu cầu trang phục</strong>
+                    <span>Nữ không mặc đầm, giày thủy tinh vì sẽ đi quá 12h. Nam scd. 👕🩳</span>
                 </div>
             </div>
         </div>
 
         <p>Sự hiện diện của các khanh là niềm vinh hạnh lớn cho bổn vương. Đứa nào bùng hẹn, Ta ghim vào sổ thù vặt của dòng họ Đặng! 📜✍️</p>
 
-        <button class="btn-rsvp" onclick="alert('Đã ghi nhận hộ giá! Chuẩn bị cái bụng đói đi ăn lẩu nhé bạn hiền 🎉')">
+        <div class="map-section">
+            <div class="map-wrapper">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.511379737151!2d106.66736647573616!3d10.772097359273934!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752edd6ec73513%3A0x8bb60e288e3e9560!2zVHJ1bmcgVMOibSBUaMawxqFuZyBN4bqhaSBW4bqhbiBI4bqhbmggTWFsbA!5e0!3m2!1svi!2svn!4v1716365000000!5m2!1svi!2svn" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <a href="https://maps.app.goo.gl/EFX7LjD6J4DLtocX6" target="_blank" class="btn-map">
+                <span class="icon"><i class="fa-solid fa-compass"></i></span>
+                Định vị la bàn
+            </a>
+        </div>
+
+        <button class="btn-rsvp" onclick="alert('Đã ghi nhận hộ giá! Chuẩn bị tinh thần và cái bụng đói để lập tổ đội ăn sập Haidilao nhé chiến hữu 🎉')">
             Hộ Giá Ngay 🥂
         </button>
 
