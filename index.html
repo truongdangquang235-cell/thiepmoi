@@ -110,9 +110,27 @@
             border: 1px solid rgba(223, 183, 60, 0.2);
             border-left: 4px solid var(--gold);
             padding: 22px;
-            margin: 30px 0;
+            margin: 25px 0;
             text-align: left;
             box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+        }
+
+        .timeline-title {
+            color: var(--gold-light);
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 1px solid rgba(223, 183, 60, 0.2);
+            padding-bottom: 5px;
+            display: flex;
+            align-items: center;
+        }
+
+        .timeline-title i {
+            margin-right: 10px;
+            color: var(--gold);
         }
 
         .info-item {
@@ -126,9 +144,9 @@
         }
 
         .icon {
-            font-size: 1.4rem;
+            font-size: 1.3rem;
             margin-right: 14px;
-            margin-top: 1px;
+            margin-top: 2px;
             color: var(--gold-light);
             filter: drop-shadow(0 0 8px var(--fantasy-glow));
         }
@@ -147,6 +165,14 @@
             font-weight: 600;
             color: #ffffff;
             line-height: 1.5;
+        }
+
+        .info-text em {
+            font-size: 0.85rem;
+            color: #bfa3ff;
+            font-style: normal;
+            display: block;
+            margin-top: 2px;
         }
 
         /* Khu vực Bản đồ cổ */
@@ -168,7 +194,7 @@
             width: 100%;
             height: 100%;
             border: 0;
-            filter: grayscale(15%) contrast(105%); /* Hiệu ứng fantasy nhẹ cho map */
+            filter: grayscale(15%) contrast(105%);
         }
 
         /* NÚT MAP FANTASY STYLE */
@@ -180,7 +206,7 @@
             color: var(--gold-light);
             font-weight: 700;
             font-size: 0.85rem;
-            padding: 12px 28px;
+            padding: 12px 24px;
             border: 1px solid var(--gold);
             border-radius: 4px;
             cursor: pointer;
@@ -189,6 +215,7 @@
             text-decoration: none;
             transition: all 0.3s ease;
             box-shadow: 0 4px 15px rgba(74, 21, 75, 0.4);
+            margin: 5px;
         }
 
         .btn-map:hover {
@@ -225,9 +252,9 @@
             font-weight: 700;
             font-size: 1rem;
             padding: 15px 40px;
-            margin-top: 20px;
+            margin-top: 10px;
             border: 1px solid var(--gold-light);
-            border-radius: 4px; /* Vuông vức kiểu khiên hiệp sĩ */
+            border-radius: 4px;
             cursor: pointer;
             text-transform: uppercase;
             letter-spacing: 2px;
@@ -237,7 +264,6 @@
             text-shadow: 0 2px 4px rgba(0,0,0,0.8);
         }
 
-        /* Hiệu ứng tia sáng quét ngang (Shimmer) cực ảo */
         .btn-rsvp::after {
             content: '';
             position: absolute;
@@ -275,6 +301,11 @@
             .map-wrapper {
                 height: 160px;
             }
+            .btn-map {
+                display: flex;
+                width: 100%;
+                margin: 8px 0;
+            }
         }
     </style>
 </head>
@@ -285,23 +316,31 @@
         
         <p>Gửi tới toàn thể Vương tôn công tử và Công nương lá ngọc cành vàng ✨</p>
         
-        <p>Nhận thấy bản thân ngày càng tài sắc vẹn toàn, nay Hoàng thân <span class="highlight-name">Đặng Quang Trường</span> quyết định mở đại yến tiệc đón tuổi mới tại thánh địa lẩu vị hoàng gia.</p>
+        <p>Nhận thấy bản thân ngày càng tài sắc vẹn toàn, nay Hoàng thân <span class="highlight-name">Đặng Quang Trường</span> quyết định mở đại yến tiệc đón tuổi mới với lịch trình thám hiểm long trọng.</p>
 
         <div class="info-box">
+            <div class="timeline-title">
+                <i class="fa-solid fa-scroll"></i> Lịch Trình Chi Tiết
+            </div>
+            
             <div class="info-item">
-                <div class="icon"><i class="fa-solid fa-map-location-dot"></i></div>
+                <div class="icon"><i class="fa-solid fa-mug-hot"></i></div>
                 <div class="info-text">
-                    <strong>Địa điểm biệt cung</strong>
+                    <strong>Tăng 1: Khởi động hoàng đạo (20:00)</strong>
+                    <span>Mellow Café ☕</span>
+                    <em>Họp mặt sương sương làm ly nước chuyện trò</em>
+                </div>
+            </div>
+
+            <div class="info-item">
+                <div class="icon"><i class="fa-solid fa-hot-tub-person"></i></div>
+                <div class="info-text">
+                    <strong>Tăng 2: Đại yến tiệc (21:30)</strong>
                     <span>Haidilao – Vạn Hạnh Mall 🍲</span>
+                    <em>Lập tổ đội càn quét thánh địa lẩu vị hoàng gia</em>
                 </div>
             </div>
-            <div class="info-item">
-                <div class="icon"><i class="fa-solid fa-hourglass-start"></i></div>
-                <div class="info-text">
-                    <strong>Thời gian hoàng đạo</strong>
-                    <span>21:30 ngày 25/05 🌙</span>
-                </div>
-            </div>
+
             <div class="info-item">
                 <div class="icon"><i class="fa-solid fa-shield-halved"></i></div>
                 <div class="info-text">
@@ -315,15 +354,21 @@
 
         <div class="map-section">
             <div class="map-wrapper">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.511379737151!2d106.66736647573616!3d10.772097359273934!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752edd6ec73513%3A0x8bb60e288e3e9560!2zVHJ1bmcgVMOibSBUaMawxqFuZyBN4bqhaSBW4bqhbiBI4bqhbmggTWFsbA!5e0!3m2!1svi!2svn!4v1716365000000!5m2!1svi!2svn" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src="https://maps.app.goo.gl/95a5w5QG15J5bA7e97" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
-            <a href="https://maps.app.goo.gl/EFX7LjD6J4DLtocX6" target="_blank" class="btn-map">
+            
+            <a href="https://maps.app.goo.gl/95a5w5QG15J5bA7e98" target="_blank" class="btn-map">
                 <span class="icon"><i class="fa-solid fa-compass"></i></span>
-                Định vị la bàn
+                La bàn Mellow Café
+            </a>
+            
+            <a href="https://maps.app.goo.gl/95a5w5QG15J5bA7e99" target="_blank" class="btn-map">
+                <span class="icon"><i class="fa-solid fa-map-pin"></i></span>
+                La bàn Haidilao VHM
             </a>
         </div>
 
-        <button class="btn-rsvp" onclick="alert('Đã ghi nhận hộ giá! Chuẩn bị tinh thần và cái bụng đói để lập tổ đội ăn sập Haidilao nhé chiến hữu 🎉')">
+        <button class="btn-rsvp" onclick="alert('Đã ghi nhận hộ giá! Chuẩn bị tinh thần và cái bụng đói để lập tổ đội quẩy từ quán cafe xuyên qua hàng lẩu nhé bạn hiền 🎉')">
             Hộ Giá Ngay 🥂
         </button>
 
